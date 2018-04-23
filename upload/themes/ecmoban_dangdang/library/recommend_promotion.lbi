@@ -1,0 +1,16 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $promotion_goods} -->
+<div class="xm-box">
+  <h4 class="title"><span>特价商品</span> </h4>
+  <div id="show_hot_area" class="clearfix"> 
+    <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+    
+    <div class="pic" <!--{if $smarty.foreach.promotion_foreach.index mod 5 eq 0}--> style='margin-left:0px;' <!-- {/if} -->> <a href="{$goods.url}"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" class="img"/>
+      <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a></p>
+     <p class="price"> {$lang.promote_price}<font class="f1">{$goods.promote_price}</font></p> </div>
+    
+    <!--{/foreach}--> 
+  </div>
+</div>
+<div class="blank"></div>
+<!-- {/if} -->

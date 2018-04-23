@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <div class="mt">
+      <ul class="fore1 lh">
+        <li ><a href="javascript:void(0);">商城公告</a></li>
+      </ul>
+    </div>
+    <div class="mc" >
+     <div class="virtuals-iframes" >
+        <ul>
+        <!--{foreach from=$new_articles item=article}-->
+        <li>
+      <a href="{$article.url}" title="{$article.title|escape:html}">{$article.short_title|truncate:20:"...":true}</a>
+        </li>
+        <!--{/foreach}-->
+        </ul>
+        </div>
+    </div>
+
